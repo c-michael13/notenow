@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "322768787009",
+    "project_id": "note-now-ab98b",
+    "storage_bucket": "note-now-ab98b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322768787009:android:231858fc488763784658c0",
+        "android_client_info": {
+          "package_name": "com.example.note_now"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBTdwdXEK6dgL7YJLzXLZ2Y2DOBk9i0zk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

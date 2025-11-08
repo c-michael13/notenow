@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:introduction_screen/introduction_screen.dart';
-import 'package:note_now/gen/assets.gen.dart';
-import 'package:note_now/view_model/constants/app_color.dart';
-import 'package:note_now/view_model/constants/responsive_helper.dart';
+import 'package:note_now/view/onboarding/utils/onboarding_utils.dart';
+
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
@@ -13,6 +9,7 @@ class OnboardingPage extends StatelessWidget {
     final width = Responsive.screenWidth(context);
     final height = Responsive.screenHeight(context);
     final primaryColor = AppColors.primary;
+    final secondary = AppColors.secondary;
     final textColor = AppColors.textPrimary;
     final textSecondaryColor = AppColors.textSecondary;
     final padding = Responsive.symmetricPadding(context, 20, 10);
@@ -66,18 +63,45 @@ class OnboardingPage extends StatelessWidget {
             child: IntroductionScreen(
               pages: pages,
               onDone: () {
-                Navigator.pushReplacementNamed(context, '/home');
+                context.go('/login');
               },
               showSkipButton: true,
-              skip: Text("Skip", style: TextStyle(color: textColor, fontSize: Responsive.fontSize(context, 16))),
-              next: Container(
-                
-                child: Icon(
-                  Icons.arrow_forward, 
-                  color: primaryColor,
+              skip: Text(
+                "Skip", 
+                style: TextStyle(
+                  color: secondary, 
+                  fontSize: Responsive.fontSize(context, 16),
+                  ),
+                ),
+              next: SizedBox.shrink(),
+              // next: Container(
+              //   height: height * 0.05,
+              //   width: width * 0.1,
+              //   decoration: BoxDecoration(
+              //     color: primaryColor.withOpacity(0.1),
+              //     borderRadius: BorderRadius.circular(8),
+              //   ),
+              //   child: Icon(
+              //     Icons.arrow_forward, 
+              //     color: primaryColor,
+              //   ),
+              // ),
+              done: Container(
+                  height: height * 0.04,
+                  width: width * 0.5,
+                  decoration: BoxDecoration(
+                    color: secondary.withOpacity(0.6),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                child: Center(
+                  child: Text(
+                    "Get Started", 
+                    style: TextStyle(
+                      color: Colors.white, 
+                      fontWeight: FontWeight.w600, 
+                      fontSize: Responsive.fontSize(context, 16))),
                 ),
               ),
-              done: Text("Done", style: TextStyle(color: primaryColor, fontWeight: FontWeight.w600, fontSize: Responsive.fontSize(context, 16))),
               dotsDecorator: DotsDecorator(
                 activeColor: primaryColor,
                 size: Size.square(8.0),

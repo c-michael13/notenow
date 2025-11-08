@@ -1,11 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
-import 'package:note_now/gen/assets.gen.dart';
-import 'package:note_now/view_model/constants/app_color.dart';
-import 'package:note_now/view_model/constants/responsive_helper.dart';
-import 'package:note_now/view_model/widgets/custom_text.dart';
+import 'package:note_now/view/onboarding/utils/onboarding_utils.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

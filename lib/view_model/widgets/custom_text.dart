@@ -6,11 +6,13 @@ class CustomText extends StatelessWidget {
   final String text;
   final double? fontSize;
   final FontWeight? fontWeight;
+  final Color? color;
   const CustomText({
     super.key,
     required this.text,
     this.fontSize,
     this.fontWeight,
+    this.color,
   });
 
   @override
@@ -19,9 +21,9 @@ class CustomText extends StatelessWidget {
 
     return Text(
       text,
-      style: GoogleFonts.akatab(
+      style: GoogleFonts.poppins(
         fontSize: fontSize,
-        color: textColor,
+        color: color ?? textColor,
         fontWeight: fontWeight,
         
       ),

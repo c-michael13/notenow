@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>This app requires access to speech recognition to convert your voice into text.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires access to your microphone to capture your voice.</string>
 	<key>CFBundleDisplayName</key>
 	<string>Note Now</string>
 	<key>CFBundleExecutable</key>

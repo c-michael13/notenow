@@ -20,12 +20,15 @@ class $ImagesGen {
   /// File path: images/girl-note.png
   AssetGenImage get girlNote => const AssetGenImage('images/girl-note.png');
 
+  /// File path: images/no-notes.png
+  AssetGenImage get noNotes => const AssetGenImage('images/no-notes.png');
+
   /// File path: images/notenaw-logo.png
   AssetGenImage get notenawLogo =>
       const AssetGenImage('images/notenaw-logo.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [brain, girlNote, notenawLogo];
+  List<AssetGenImage> get values => [brain, girlNote, noNotes, notenawLogo];
 }
 
 class Assets {

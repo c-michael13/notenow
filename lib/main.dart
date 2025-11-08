@@ -1,11 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:note_now/view/onboarding/splash_screen.dart';
+import 'package:note_now/firebase_options.dart';
+import 'package:note_now/view/onboarding/screens/splash_screen.dart';
 import 'package:note_now/view_model/constants/app_color.dart';
 import 'package:note_now/view_model/core/router/router_configuration.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
 
   runApp(ProviderScope(child: const MyApp()));
 }
